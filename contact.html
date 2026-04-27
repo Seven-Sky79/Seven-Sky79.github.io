@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>联系我 - Qijiu | 合作咨询</title>
-  <meta name="description" content="设计合作、项目委托、创意咨询，欢迎随时联系我。">
+  <title>联系我 - 袁鹏 | 电商设计师</title>
+  <meta name="description" content="联系袁鹏进行设计合作，获取联系方式与合作咨询。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!-- 导航栏 -->
 <nav class="navbar">
   <div class="container nav-wrap">
-    <a href="index.html" class="logo">Qijiu</a>
+    <a href="index.html" class="logo">YUAN PENG · DESIGN</a>
     <ul class="nav-menu">
       <li><a href="index.html">首页</a></li>
       <li><a href="portfolio.html">作品集</a></li>
@@ -21,43 +22,63 @@
   </div>
 </nav>
 
-<section class="container">
-  <h1>联系我</h1>
-  <form>
-    <div class="form-group">
-      <input placeholder="姓名" required>
-    </div>
-    <div class="form-group">
-      <input type="email" placeholder="邮箱" required>
-    </div>
-    <div class="form-group">
-      <textarea rows="5" placeholder="留言内容" required></textarea>
-    </div>
-    <button type="submit">提交信息</button>
-  </form>
-  <div class="contact-info">
-    <p>邮箱：your@email.com <button class="copy-btn" onclick="copyText()">复制</button></p>
-    <p>电话：138xxxx8888</p>
-    <div class="social-links">
-      <a href="#">Behance</a>
-      <a href="#">Dribbble</a>
-      <a href="#">小红书</a>
-      <a href="#">Ins</a>
+<!-- 联系我内容 -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-content">
+      <div class="contact-info">
+        <h1>联系我</h1>
+        <p>如果您有设计合作需求，欢迎通过以下方式联系我，期待与您一起打造优质设计作品。</p>
+        
+        <div class="contact-item">
+          <h3>📞 电话</h3>
+          <p>155 9927 6792</p>
+        </div>
+        <div class="contact-item">
+          <h3>📧 邮箱</h3>
+          <p>2534917542@qq.com</p>
+        </div>
+        <div class="contact-item">
+          <h3>💬 微信</h3>
+          <p>qqwx79k（备注设计合作）</p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h2>发送合作咨询</h2>
+        <form>
+          <input type="text" placeholder="您的姓名" required>
+          <input type="text" placeholder="项目类型（如电商设计/品牌设计）" required>
+          <textarea placeholder="项目需求简述" rows="5" required></textarea>
+          <button type="submit" class="btn btn-primary">提交咨询</button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- 页脚 -->
 <footer class="footer">
   <div class="container">
-    <p>© 2025 Qijiu | 视觉设计师</p>
+    <p>© 2026 YUAN PENG · 电商设计师</p>
   </div>
 </footer>
 
+<!-- 汉堡菜单JS -->
 <script>
-function copyText(){
-  navigator.clipboard.writeText("your@email.com");
-  alert("已复制");
-}
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+});
+
+document.querySelectorAll('.nav-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    hamburger.textContent = '☰';
+  });
+});
 </script>
 </body>
 </html>
