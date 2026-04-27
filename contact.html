@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我 - Qijiu | 合作咨询</title>
+  <meta name="description" content="设计合作、项目委托、创意咨询，欢迎随时联系我。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="container nav-wrap">
+    <a href="index.html" class="logo">Qijiu</a>
+    <ul class="nav-menu">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="portfolio.html">作品集</a></li>
+      <li><a href="about.html">关于我</a></li>
+      <li><a href="contact.html" class="active">联系我</a></li>
+    </ul>
+    <button class="hamburger">☰</button>
+  </div>
+</nav>
+
+<section class="container">
+  <h1>联系我</h1>
+  <form>
+    <div class="form-group">
+      <input placeholder="姓名" required>
+    </div>
+    <div class="form-group">
+      <input type="email" placeholder="邮箱" required>
+    </div>
+    <div class="form-group">
+      <textarea rows="5" placeholder="留言内容" required></textarea>
+    </div>
+    <button type="submit">提交信息</button>
+  </form>
+  <div class="contact-info">
+    <p>邮箱：your@email.com <button class="copy-btn" onclick="copyText()">复制</button></p>
+    <p>电话：138xxxx8888</p>
+    <div class="social-links">
+      <a href="#">Behance</a>
+      <a href="#">Dribbble</a>
+      <a href="#">小红书</a>
+      <a href="#">Ins</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Qijiu | 视觉设计师</p>
+  </div>
+</footer>
+
+<script>
+function copyText(){
+  navigator.clipboard.writeText("your@email.com");
+  alert("已复制");
+}
+</script>
+</body>
+</html>
