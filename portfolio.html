@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>作品集 - Qijiu | 设计师</title>
-  <meta name="description" content="全部设计作品：品牌、图片、视频、三维、AIGC创意设计">
+  <title>作品集 - 袁鹏 | 电商设计师</title>
+  <meta name="description" content="袁鹏的电商设计、品牌设计、AIGC创意作品集，极简高级感设计案例展示。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!-- 导航栏 -->
 <nav class="navbar">
   <div class="container nav-wrap">
-    <a href="index.html" class="logo">Qijiu</a>
+    <a href="index.html" class="logo">YUAN PENG · DESIGN</a>
     <ul class="nav-menu">
       <li><a href="index.html">首页</a></li>
       <li><a href="portfolio.html" class="active">作品集</a></li>
@@ -21,44 +22,76 @@
   </div>
 </nav>
 
-<section class="container">
-  <h1>全部作品</h1>
-  <div class="filter">
-    <a href="#" class="active">全部</a>
-    <a href="#">图片</a>
-    <a href="#">视频</a>
-    <a href="#">三维</a>
-    <a href="#">AIGC</a>
-  </div>
-  <div class="grid">
-    <div class="work-card">
-      <a href="work-detail.html">
+<!-- 作品集列表 -->
+<section class="portfolio-section">
+  <div class="container">
+    <h1>全部作品集</h1>
+    <p class="section-desc">涵盖品牌设计、电商视觉、AIGC创意、动态影像等多个领域的设计案例</p>
+    
+    <div class="grid">
+      <div class="work-card">
         <img src="images/work1.jpg" alt="品牌视觉设计作品">
         <span class="work-tag">品牌设计</span>
         <h3>极简LOGO视觉系统</h3>
-      </a>
-    </div>
-    <div class="work-card">
-      <a href="work-detail.html">
+        <a href="work-detail.html" class="view-link">查看详情 →</a>
+      </div>
+      <div class="work-card">
         <img src="images/work2.jpg" alt="AIGC创意作品">
         <span class="work-tag">AIGC</span>
         <h3>AI艺术创意创作</h3>
-      </a>
-    </div>
-    <div class="work-card">
-      <a href="work-detail.html">
+        <a href="work-detail.html" class="view-link">查看详情 →</a>
+      </div>
+      <div class="work-card">
         <img src="images/work3.jpg" alt="数字影像作品">
         <span class="work-tag">视频/影像</span>
         <h3>动态视觉短片</h3>
-      </a>
+        <a href="work-detail.html" class="view-link">查看详情 →</a>
+      </div>
+      <div class="work-card">
+        <img src="images/work4.jpg" alt="电商设计作品">
+        <span class="work-tag">电商设计</span>
+        <h3>品牌电商详情页</h3>
+        <a href="work-detail.html" class="view-link">查看详情 →</a>
+      </div>
+      <div class="work-card">
+        <img src="images/work5.jpg" alt="平面设计作品">
+        <span class="work-tag">平面设计</span>
+        <h3>极简海报系列</h3>
+        <a href="work-detail.html" class="view-link">查看详情 →</a>
+      </div>
+      <div class="work-card">
+        <img src="images/work6.jpg" alt="三维渲染作品">
+        <span class="work-tag">三维渲染</span>
+        <h3>产品3D视觉呈现</h3>
+        <a href="work-detail.html" class="view-link">查看详情 →</a>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- 页脚 -->
 <footer class="footer">
   <div class="container">
-    <p>© 2025 Qijiu | 视觉设计师</p>
+    <p>© 2026 YUAN PENG · 电商设计师</p>
   </div>
 </footer>
+
+<!-- 汉堡菜单JS -->
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+});
+
+document.querySelectorAll('.nav-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    hamburger.textContent = '☰';
+  });
+});
+</script>
 </body>
 </html>
