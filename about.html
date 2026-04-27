@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>关于我 - Qijiu | 视觉设计师</title>
-  <meta name="description" content="个人简介、专业背景、设计理念、技能标签、工作经历与荣誉奖项">
+  <title>关于我 - 袁鹏 | 电商设计师</title>
+  <meta name="description" content="了解袁鹏的设计理念、技能与经历，专注极简高级感电商设计与AIGC创作。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!-- 导航栏 -->
 <nav class="navbar">
   <div class="container nav-wrap">
-    <a href="index.html" class="logo">Qijiu</a>
+    <a href="index.html" class="logo">YUAN PENG · DESIGN</a>
     <ul class="nav-menu">
       <li><a href="index.html">首页</a></li>
       <li><a href="portfolio.html">作品集</a></li>
@@ -21,34 +22,56 @@
   </div>
 </nav>
 
-<section class="container">
-  <div class="about-wrap">
-    <div class="avatar">
-      <img src="images/avatar.jpg" alt="个人头像">
-    </div>
-    <div>
-      <h1>关于我</h1>
-      <p>
-        资深视觉设计师，拥有丰富的品牌与数字媒体设计经验，
-        专注极简高级感设计与AIGC创意创作，擅长将商业需求与艺术表达结合。
-      </p>
-      <h3>设计理念</h3>
-      <p>少即是多，用留白与细节传递高级质感，让设计回归本质。</p>
-      <h3>技能</h3>
-      <div class="skill-list">
-        <span class="skill">品牌设计</span>
-        <span class="skill">视觉传达</span>
-        <span class="skill">AIGC</span>
-        <span class="skill">动态设计</span>
+<!-- 关于我内容 -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h1>关于我</h1>
+        <p>资深视觉设计师，拥有丰富的品牌与数字媒体设计经验，专注极简高级感设计与AIGC创意创作，擅长将商业需求与艺术表达结合。</p>
+        
+        <h2>设计理念</h2>
+        <p>少即是多，用留白与细节传递高级质感，让设计回归本质。拒绝过度装饰，让每一个元素都服务于品牌与用户体验。</p>
+        
+        <h2>技能领域</h2>
+        <div class="skills-list">
+          <span class="skill-tag">品牌设计</span>
+          <span class="skill-tag">视觉传达</span>
+          <span class="skill-tag">电商美工</span>
+          <span class="skill-tag">三维渲染</span>
+          <span class="skill-tag">AIGC创意</span>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="images/about.jpg" alt="袁鹏的工作照" class="about-img">
       </div>
     </div>
   </div>
 </section>
 
+<!-- 页脚 -->
 <footer class="footer">
   <div class="container">
-    <p>© 2025 Qijiu | 视觉设计师</p>
+    <p>© 2025 YUAN PENG · 电商设计师</p>
   </div>
 </footer>
+
+<!-- 汉堡菜单JS -->
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+});
+
+document.querySelectorAll('.nav-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    hamburger.textContent = '☰';
+  });
+});
+</script>
 </body>
 </html>
