@@ -1,5 +1,5 @@
 /* ======================
-   全局基础样式（统一风格）
+   全局基础样式
 ====================== */
 :root {
   --black: #000000;
@@ -100,73 +100,113 @@ p {
 }
 
 /* ======================
-   英雄区 + 头像样式（左右结构核心）
+   英雄区（核心：PC左文右图，手机上下）
 ====================== */
 .hero {
   padding: 6rem 0;
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
 }
 
-.hero-content {
-  display: flex; /* 关键：开启flex布局 */
-  align-items: center; /* 头像和文字垂直居中 */
-  justify-content: center;
-  gap: 3rem; /* 头像和文字之间的间距 */
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: left; /* 文字改为左对齐 */
+/* PC端布局 */
+@media (min-width: 769px) {
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    width: 100%;
+  }
+
+  .hero-text-side {
+    flex: 1;
+    max-width: 550px;
+    text-align: left;
+  }
+
+  .hero-image-side {
+    flex: 1;
+    max-width: 450px;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
 }
 
-/* 头像专属样式（左侧固定圆形） */
-.avatar-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--black);
-  flex-shrink: 0; /* 防止头像被压缩变形 */
+/* 手机端保持原有上下结构 */
+@media (max-width: 768px) {
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-text-side {
+    margin-bottom: 2rem;
+  }
+
+  .hero-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
 }
 
-/* 文字部分容器（右侧自适应） */
-.hero-text {
-  flex: 1; /* 占满剩余宽度 */
-  max-width: 600px;
+/* 英雄区文字样式 */
+.hero-text-side h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+.phone {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
 }
 
-.hero p {
-  font-size: 1.1rem;
-  margin: 0 0 2rem 0;
-  color: #555;
+.tags {
+  font-size: 1rem;
+  color: #666;
 }
 
-/* ======================
-   按钮样式
-====================== */
+/* 按钮样式 */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .btn {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background: var(--black);
-  color: var(--white);
   border-radius: 0;
   transition: all 0.3s;
   border: 2px solid var(--black);
+  cursor: pointer;
 }
 
-.btn:hover {
+.btn-primary {
+  background: var(--black);
+  color: var(--white);
+}
+
+.btn-outline {
   background: transparent;
   color: var(--black);
 }
 
-.btn[style*="background:var(--black)"] {
-  background: var(--black) !important;
-  color: white !important;
+.btn:hover {
+  opacity: 0.8;
 }
 
 /* ======================
@@ -230,31 +270,33 @@ section h2 {
 }
 
 /* ======================
-   移动端响应式适配（手机端变回上下结构）
+   移动端响应式 + 汉堡菜单
 ====================== */
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #eee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .nav-menu.active {
+    display: flex;
   }
 
   .hamburger {
     display: block;
   }
 
-  /* 手机端英雄区改回上下排列 */
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .avatar-img {
-    width: 130px;
-    height: 130px;
+  .hero-text-side h1 {
+    font-size: 2.2rem;
   }
 
   .grid {
