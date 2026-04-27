@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- 导航 -->
+<!-- 导航栏（PC端横向菜单，手机端汉堡菜单） -->
 <nav class="navbar">
   <div class="container nav-wrap">
-    <a href="index.html" class="logo">Qijiu</a>
+    <a href="index.html" class="logo">YUAN PENG · DESIGN</a>
     <ul class="nav-menu">
       <li><a href="index.html" class="active">首页</a></li>
       <li><a href="portfolio.html">作品集</a></li>
@@ -22,11 +22,11 @@
   </div>
 </nav>
 
-<!-- 英雄区（PC端左文右图，手机端上下结构） -->
+<!-- 英雄区（核心：PC端左文右图，手机端自动上下结构） -->
 <section class="hero">
   <div class="container">
     <div class="hero-content">
-      <!-- 左侧文字 -->
+      <!-- 左侧文字区（PC左/手机上） -->
       <div class="hero-text-side">
         <h1>袁鹏<br>电商设计师/美工</h1>
         <p class="phone">📞 155 9927 6792</p>
@@ -36,7 +36,7 @@
           <a href="contact.html" class="btn btn-outline">联系合作</a>
         </div>
       </div>
-      <!-- 右侧图片 -->
+      <!-- 右侧图片区（PC右/手机下） -->
       <div class="hero-image-side">
         <img src="images/avatar.jpg" alt="袁鹏的形象照" class="hero-img">
       </div>
@@ -45,7 +45,7 @@
 </section>
 
 <!-- 代表作品 -->
-<section>
+<section class="works-section">
   <div class="container">
     <h2>代表作品</h2>
     <div class="grid">
@@ -69,12 +69,12 @@
 </section>
 
 <!-- 快捷入口 -->
-<section style="background:var(--light-gray)">
+<section class="cta-section" style="background:var(--light-gray)">
   <div class="container" style="text-align:center">
     <h2>快速导航</h2>
     <div style="margin-top:2rem; display:flex; gap:2rem; justify-content:center; flex-wrap:wrap">
       <a href="portfolio.html" class="btn">全部作品集</a>
-      <a href="contact.html" class="btn" style="background:var(--black)">立即联系</a>
+      <a href="contact.html" class="btn btn-primary">立即联系</a>
     </div>
   </div>
 </section>
@@ -82,20 +82,23 @@
 <!-- 页脚 -->
 <footer class="footer">
   <div class="container">
-    <p>© 2025 Qijiu | 视觉设计师</p>
+    <p>© 2025 YUAN PENG · 电商设计师</p>
   </div>
 </footer>
 
-<!-- 汉堡菜单JS -->
+<!-- 汉堡菜单交互JS（所有页面通用） -->
 <script>
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
+// 点击汉堡按钮切换菜单显示/隐藏
 hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('active');
+  // 按钮图标自动切换（☰ ↔ ✕）
   hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
 });
 
+// 点击菜单项后自动收起菜单
 document.querySelectorAll('.nav-menu a').forEach(link => {
   link.addEventListener('click', () => {
     navMenu.classList.remove('active');
