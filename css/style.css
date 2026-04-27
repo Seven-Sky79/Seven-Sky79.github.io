@@ -236,3 +236,12 @@ input, textarea {
   .hamburger { display: block; }
   .grid { grid-template-columns: 1fr; }
 }
+/* 头像样式 */
+.avatar-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* 圆形头像 */
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 3px solid #000; /* 黑色边框，可选 */
+}
