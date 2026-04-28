@@ -158,8 +158,9 @@ p {
   }
   .hero-img {
     width: 100%;
-    height: 500px;
+    aspect-ratio: 1 / 1; /* 强制1:1正方形 */
     object-fit: cover;
+    object-position: center;
     border-radius: 4px;
   }
 }
@@ -173,12 +174,13 @@ p {
     margin-bottom: 2rem;
   }
   .hero-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 300px; /* 手机端限制最大宽度，避免撑满 */
+    aspect-ratio: 1 / 1; /* 手机端也改为正方形 */
     margin: 0 auto;
     object-fit: cover;
-    border: 3px solid var(--black);
+    border-radius: 4px; /* 去掉圆形，改为和PC端一致的圆角 */
+    border: none; /* 去掉圆形边框 */
   }
   .hero-buttons {
     justify-content: center;
@@ -239,9 +241,10 @@ section h2 {
 }
 .work-card img {
   width: 100%;
-  height: 250px;
+  aspect-ratio: 1 / 1; 
   object-fit: cover;
   margin-bottom: 1rem;
+  border-radius: 4px;
 }
 .work-tag {
   display: inline-block;
