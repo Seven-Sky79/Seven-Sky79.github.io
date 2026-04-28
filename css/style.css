@@ -1,5 +1,5 @@
 /* ======================
-   全局基础样式（统一风格）
+   全局基础样式
 ====================== */
 :root {
   --black: #000000;
@@ -42,7 +42,6 @@ img {
   display: block;
 }
 
-/* 字体层级：标题粗/正文细，符合极简设计 */
 h1, h2, h3 {
   line-height: 1.3;
   margin-bottom: 1rem;
@@ -56,7 +55,7 @@ p {
 }
 
 /* ======================
-   导航栏样式（含汉堡菜单）
+   导航栏 + 汉堡菜单
 ====================== */
 .navbar {
   padding: 1.5rem 0;
@@ -103,7 +102,31 @@ p {
 }
 
 /* ======================
-   英雄区（核心：PC左文右图，手机上下结构）
+   按钮通用样式
+====================== */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 0;
+  transition: all 0.3s;
+  border: 2px solid var(--black);
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.btn-primary {
+  background: var(--black);
+  color: var(--white);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--black);
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* ======================
+   首页英雄区（PC左文右图 | 手机上下）
 ====================== */
 .hero {
   padding: 6rem 0;
@@ -116,9 +139,7 @@ p {
   width: 100%;
 }
 
-/* ----------------------
-   PC端（769px以上）：左右分栏
----------------------- */
+/* PC端布局 */
 @media (min-width: 769px) {
   .hero-content {
     display: flex;
@@ -126,20 +147,15 @@ p {
     justify-content: space-between;
     gap: 5rem;
   }
-
-  /* 左侧文字区 */
   .hero-text-side {
     flex: 1;
     max-width: 550px;
     text-align: left;
   }
-
-  /* 右侧图片区 */
   .hero-image-side {
     flex: 1;
     max-width: 450px;
   }
-
   .hero-img {
     width: 100%;
     height: 500px;
@@ -148,18 +164,14 @@ p {
   }
 }
 
-/* ----------------------
-   手机端（768px以下）：自动变回上下结构
----------------------- */
+/* 手机端布局 */
 @media (max-width: 768px) {
   .hero-content {
     text-align: center;
   }
-
   .hero-text-side {
     margin-bottom: 2rem;
   }
-
   .hero-img {
     width: 200px;
     height: 200px;
@@ -168,122 +180,246 @@ p {
     object-fit: cover;
     border: 3px solid var(--black);
   }
-
   .hero-buttons {
     justify-content: center;
   }
 }
 
-/* 英雄区文字样式（和截图完全匹配） */
+/* 英雄区文字样式 */
 .hero-text-side h1 {
   font-size: 3rem;
   line-height: 1.2;
   font-weight: 700;
 }
-
 .phone {
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--black);
   margin: 1.5rem 0;
 }
-
 .tags {
   font-size: 0.95rem;
   color: #666;
   margin-bottom: 2rem;
 }
-
-/* 按钮样式（双按钮适配） */
 .hero-buttons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-.btn {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  border-radius: 0;
-  transition: all 0.3s;
-  border: 2px solid var(--black);
-  cursor: pointer;
-  font-size: 0.95rem;
-}
-
-.btn-primary {
-  background: var(--black);
-  color: var(--white);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--black);
-}
-
-.btn:hover {
-  opacity: 0.8;
-}
-
 /* ======================
-   作品网格样式
+   作品展示网格（首页+作品集）
 ====================== */
-.works-section {
+.works-section,
+.portfolio-section {
   padding: 5rem 0;
 }
-
 section h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 3rem;
 }
-
+.section-desc {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  color: #666;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2.5rem;
 }
-
 .work-card {
   transition: transform 0.3s;
 }
-
 .work-card:hover {
   transform: translateY(-5px);
 }
-
 .work-card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
   margin-bottom: 1rem;
 }
-
 .work-tag {
   display: inline-block;
   font-size: 0.85rem;
   color: #666;
   margin-bottom: 0.5rem;
 }
-
 .work-card h3 {
   font-size: 1.2rem;
 }
+.view-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  transition: color 0.3s;
+}
+.view-link:hover {
+  color: var(--black);
+}
 
 /* ======================
-   快捷入口 & 页脚样式
+   淘宝式作品画廊（大图+缩略图切换）
+====================== */
+.tb-gallery {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+.tb-main {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.tb-main img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.tb-thumb {
+  display: flex;
+  gap: 0.8rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+.tb-thumb img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 2px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  flex-shrink: 0;
+}
+.tb-thumb img.active {
+  border-color: #000;
+  opacity: 1;
+}
+.tb-thumb img:hover {
+  opacity: 1;
+}
+
+/* ======================
+   关于我页面（工作经历+专业技能）
+====================== */
+.about-section {
+  padding: 6rem 0;
+}
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+}
+.about-text {
+  flex: 1;
+}
+.about-image {
+  flex: 1;
+}
+.about-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* 工作经历样式 */
+.experience-list {
+  margin: 1rem 0;
+}
+.experience-item {
+  margin-bottom: 2rem;
+}
+.experience-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #000;
+}
+.experience-item ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.experience-item li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+  list-style: disc;
+}
+
+/* 专业技能样式 */
+.skills-group {
+  margin-top: 1rem;
+}
+.skill-item {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+/* ======================
+   联系我页面
+====================== */
+.contact-section {
+  padding: 6rem 0;
+}
+.contact-content {
+  display: flex;
+  gap: 4rem;
+}
+.contact-info, .contact-form {
+  flex: 1;
+}
+.contact-item {
+  margin-bottom: 2rem;
+}
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  font-family: inherit;
+}
+
+/* ======================
+   作品详情页面
+====================== */
+.work-detail-section {
+  padding: 6rem 0;
+}
+.work-detail-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.work-tag-detail {
+  color: #666;
+  font-size: 1rem;
+}
+.work-detail-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.back-link {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* ======================
+   快捷入口 + 页脚
 ====================== */
 .cta-section {
   padding: 5rem 0;
 }
-
 .footer {
   padding: 2rem 0;
   text-align: center;
   border-top: 1px solid #eee;
   margin-top: 2rem;
 }
-
 .footer p {
   color: #666;
   margin: 0;
@@ -291,11 +427,11 @@ section h2 {
 }
 
 /* ======================
-   移动端响应式 + 汉堡菜单激活样式
+   移动端全适配
 ====================== */
 @media (max-width: 768px) {
+  /* 汉堡菜单 */
   .nav-menu {
-    /* 默认隐藏 */
     display: none;
     position: absolute;
     top: 100%;
@@ -308,21 +444,34 @@ section h2 {
     border-top: 1px solid #eee;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   }
-
-  /* 点击汉堡按钮后激活显示 */
   .nav-menu.active {
     display: flex;
   }
-
   .hamburger {
     display: block;
   }
 
+  /* 字体适配 */
   .hero-text-side h1 {
     font-size: 2.2rem;
   }
-
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  /* 页面布局适配 */
+  .about-content, 
+  .contact-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .about-img {
+    height: 300px;
+  }
+
+  /* 淘宝画廊移动端 */
+  .tb-thumb img{
+    width: 70px;
+    height: 70px;
   }
 }
