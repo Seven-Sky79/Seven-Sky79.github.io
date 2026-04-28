@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>作品详情 - 极简LOGO视觉系统 | 袁鹏</title>
-  <meta name="description" content="极简LOGO视觉系统设计案例详情，品牌设计与视觉识别系统展示。">
+  <title>作品详情 | 袁鹏</title>
+  <meta name="description" content="主图、A+、视频系统展示。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,34 +22,64 @@
   </div>
 </nav>
 
-<!-- 作品详情内容 -->
-<section class="work-detail-section">
-  <div class="container">
-    <div class="work-detail-header">
-      <h1>极简LOGO视觉系统</h1>
-      <p class="work-tag-detail">品牌设计 / 视觉识别系统</p>
+    <!-- 淘宝式图片画廊（适配你的文件路径） -->
+    <div class="tb-gallery">
+      <div class="tb-main">
+        <img id="tbMainImg" src="images/dd-yashua/DDYS-1.jpg" alt="电动牙刷主图">
+      </div>
+      <div class="tb-thumb">
+        <img src="images/dd-yashua/DDYS-1.jpg" onclick="switchImg(this)" class="active">
+        <img src="images/dd-yashua/DDYS-2(1).jpg" onclick="switchImg(this)">
+        <img src="images/dd-yashua/DDYS-2(2).jpg" onclick="switchImg(this)">
+        <img src="images/dd-yashua/DDYS-2(3).jpg" onclick="switchImg(this)">
+        <img src="images/dd-yashua/DDYS-2(4).jpg" onclick="switchImg(this)">
+        <img src="images/dd-yashua/DDYS-2(5).jpg" onclick="switchImg(this)">
+        <img src="images/dd-yashua/DDYS-2(6).jpg" onclick="switchImg(this)">
+      </div>
     </div>
-    
-    <div class="work-detail-image">
-      <img src="images/work1-detail.jpg" alt="极简LOGO视觉系统详情">
+      <div class="tb-gallery">
+      <div class="tb-main">
+        <img id="tbMainImg" src="images/Caideng/CD-1.jpg" alt="彩灯主图">
+      </div>
+      <div class="tb-thumb">
+        <img src="images/Caideng/CD-1.jpg" onclick="switchImg(this)" class="active">
+        <img src="images/Caideng/CD-2(1).jpg" onclick="switchImg(this)">
+        <img src="images/Caideng/CD-2(2).jpg" onclick="switchImg(this)">
+        <img src="images/Caideng/CD-2(3).jpg" onclick="switchImg(this)">
+        <img src="images/Caideng/CD-2(4).jpg" onclick="switchImg(this)">
+        <img src="images/Caideng/CD-2(5).jpg" onclick="switchImg(this)">
+        <img src="images/Caideng/CD-2(6).jpg" onclick="switchImg(this)">
+      </div>
     </div>
-    
-    <div class="work-detail-content">
-      <h2>项目背景</h2>
-      <p>为新锐生活方式品牌打造极简LOGO及视觉识别系统，以简约线条传递品牌的纯粹质感，适配多场景应用需求。</p>
-      
-      <h2>设计理念</h2>
-      <p>以“少即是多”为核心，通过几何图形的组合与留白，打造兼具识别性与高级感的品牌符号，让LOGO在不同载体中都能保持清晰的视觉呈现。</p>
-      
-      <h2>应用场景</h2>
-      <ul>
-        <li>品牌主视觉与副视觉延展</li>
-        <li>电商平台店铺视觉</li>
-        <li>线下物料与包装设计</li>
-        <li>社交媒体头像与海报</li>
-      </ul>
+      <div class="tb-gallery">
+      <div class="tb-main">
+        <img id="tbMainImg" src="images/Watch/SB-1.jpg" alt="手表主图">
+      </div>
+      <div class="tb-thumb">
+        <img src="images/Watch/SB-1.jpg" onclick="switchImg(this)" class="active">
+        <img src="images/Watch/SB-2(1).jpg" onclick="switchImg(this)">
+        <img src="images/Watch/SB-2(2).jpg" onclick="switchImg(this)">
+        <img src="images/Watch/SB-2(3).jpg" onclick="switchImg(this)">
+        <img src="images/Watch/SB-2(4).jpg" onclick="switchImg(this)">
+        <img src="images/Watch/SB-2(5).jpg" onclick="switchImg(this)">
+        <img src="images/Watch/SB-2(6).jpg" onclick="switchImg(this)">
+      </div>
     </div>
-    
+      <div class="tb-gallery">
+      <div class="tb-main">
+        <img id="tbMainImg" src="images/chongdianqiXR/CDQ-1.jpg" alt="充电器主图">
+      </div>
+      <div class="tb-thumb">
+        <img src="images/chongdianqiXR/CDQ-1.jpg" onclick="switchImg(this)" class="active">
+        <img src="images/chongdianqiXR/CDQ-2(1).jpg" onclick="switchImg(this)">
+        <img src="images/chongdianqiXR/CDQ-2(2).jpg" onclick="switchImg(this)">
+        <img src="images/chongdianqiXR/CDQ-2(3).jpg" onclick="switchImg(this)">
+        <img src="images/chongdianqiXR/CDQ-2(4).jpg" onclick="switchImg(this)">
+        <img src="images/chongdianqiXR/CDQ-2(5).jpg" onclick="switchImg(this)">
+        <img src="images/chongdianqiXR/CDQ-2(6).jpg" onclick="switchImg(this)">
+      </div>
+    </div>
+
     <div class="back-link">
       <a href="portfolio.html" class="btn btn-outline">← 返回作品集</a>
     </div>
@@ -62,6 +92,17 @@
     <p>© 2026 YUAN PENG · 电商设计师</p>
   </div>
 </footer>
+
+  <!-- 交互JS -->
+<script>
+// 图片切换
+function switchImg(el){
+  document.getElementById('tbMainImg').src = el.src;
+  document.querySelectorAll('.tb-thumb img').forEach(item=>{
+    item.classList.remove('active');
+  })
+  el.classList.add('active');
+}
 
 <!-- 汉堡菜单JS -->
 <script>
