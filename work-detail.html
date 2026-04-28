@@ -6,7 +6,7 @@
   <title>作品详情 | 袁鹏</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* 全局灯箱样式 */
+    /* 灯箱放大样式（保留不变） */
     .lightbox {
       display: none;
       position: fixed;
@@ -24,7 +24,6 @@
       max-height: 90vh;
       object-fit: contain;
     }
-    /* 左右切换按钮 */
     .lightbox-prev,
     .lightbox-next {
       position: absolute;
@@ -59,7 +58,7 @@
   </style>
 </head>
 <body>
-<!-- 导航栏 -->
+<!-- 导航栏（全站统一） -->
 <nav class="navbar">
   <div class="container nav-wrap">
     <a href="index.html" class="logo">YUAN PENG · DESIGN</a>
@@ -73,324 +72,29 @@
   </div>
 </nav>
 
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
+<section class="work-detail-section">
+  <div class="container">
+    <div class="work-detail-header">
+      <!-- 产品标题（JS自动填充） -->
+      <h1 id="workTitle">产品设计案例</h1>
+      <p class="work-tag-detail">三维渲染 / 电商视觉</p>
+    </div>
+
+    <!-- 淘宝式图片画廊（自动加载当前产品的图片） -->
     <div class="tb-gallery">
       <div class="tb-main">
-        <img id="tbMainImg" src="images/dd-yashua/DDYS-1.jpg" alt="电动牙刷主图">
+        <img id="tbMainImg" src="" alt="主图" onclick="openLightboxByUrl(this.src)">
       </div>
-      <div class="tb-thumb">
-        <img src="images/dd-yashua/DDYS-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/dd-yashua/DDYS-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/dd-yashua/DDYS-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/dd-yashua/DDYS-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/dd-yashua/DDYS-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/dd-yashua/DDYS-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/dd-yashua/DDYS-2 (6).jpg" onclick="switchImg(this)">
+      <div class="tb-thumb" id="thumbList">
+        <!-- 缩略图由JS自动生成，不用手动写 -->
       </div>
     </div>
 
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/Caideng/CD-1.jpg" alt="彩灯主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/Caideng/CD-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/Caideng/CD-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/Caideng/CD-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/Caideng/CD-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/Caideng/CD-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/Caideng/CD-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/Caideng/CD-2 (6).jpg" onclick="switchImg(this)">
-        <img src="images/Caideng/CD-2 (7).jpg" onclick="switchImg(this)">
-      </div>
+    <div class="work-detail-content">
+      <h2>项目介绍</h2>
+      <!-- 产品介绍（JS自动填充） -->
+      <p id="workDesc">产品三维建模、材质渲染、场景合成，全套电商视觉落地，适配跨境平台展示规范。</p>
     </div>
-
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/Watch/SB-1.jpg" alt="手表主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/Watch/SB-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/Watch/SB-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/Watch/SB-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/Watch/SB-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/Watch/SB-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/Watch/SB-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/Watch/SB-2 (6).jpg" onclick="switchImg(this)">
-      </div>
-    </div>
-
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/nienieqiu/NNQ-1.jpg" alt="捏捏球主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/nienieqiu/NNQ-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/nienieqiu/NNQ-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/nienieqiu/NNQ-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/nienieqiu/NNQ-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/nienieqiu/NNQ-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/nienieqiu/NNQ-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/nienieqiu/NNQ-2 (6).jpg" onclick="switchImg(this)">
-      </div>
-    </div>
-
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/bakeqqiu/BKQ-1.jpg" alt="巴克球主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/bakeqqiu/BKQ-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/bakeqqiu/BAQ-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/bakeqqiu/BAQ-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/bakeqqiu/BAQ-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/bakeqqiu/BAQ-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/bakeqqiu/BAQ-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/bakeqqiu/BAQ-2 (6).jpg" onclick="switchImg(this)">
-      </div>
-    </div>
-  
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/tuyaban/TYB-1.jpg" alt="涂鸦板主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/tuyaban/TYB-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/tuyaban/TYB-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/tuyaban/TYB-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/tuyaban/TYB-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/tuyaban/TYB-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/tuyaban/TYB-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/tuyaban/TYB-2 (6).jpg" onclick="switchImg(this)">
-      </div>
-    </div>
-
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/chongdianqieXR/CDQ-1 (1).jpg" alt="充电器主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/chongdianqieXR/CDQ-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/chongdianqieXR/CDQ-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/chongdianqieXR/CDQ-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/chongdianqieXR/CDQ-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/chongdianqieXR/CDQ-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/chongdianqieXR/CDQ-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/chongdianqieXR/CDQ-2 (6).jpg" onclick="switchImg(this)">
-      </div>
-    </div>      
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/kq-jinghuaqi/JHQ-1.jpg" alt="净化器主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/kq-jinghuaqi/JHQ-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/kq-jinghuaqi/JHQ-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/kq-jinghuaqi/JHQ-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/kq-jinghuaqi/JHQ-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/kq-jinghuaqi/JHQ-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/kq-jinghuaqi/JHQ-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/kq-jinghuaqi/JHQ-2 (6).jpg" onclick="switchImg(this)">
-      </div>
-    </div>
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/zhijaiqia/zjq-1.jpg" alt="指甲钳主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/zhijaiqia/zjq-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/zhijaiqia/zjq-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/zhijaiqia/zjq-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/zhijaiqia/zjq-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/zhijaiqia/zjq-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/zhijaiqia/zjq-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/zhijaiqia/zjq-2 (6).jpg" onclick="switchImg(this)">
-      </div>
-    </div>   
-    
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/meizhuangdan/MZD-1.jpg" alt="美妆蛋主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/meizhuangdan/MZD-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/meizhuangdan/MZD-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/meizhuangdan/MZD-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/meizhuangdan/MZD-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/meizhuangdan/MZD-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/meizhuangdan/MZD-2 (5).jpg" onclick="switchImg(this)">
-      </div>
-    </div>  
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/yingerxibiqi/xbq1.jpg" alt="婴儿吸鼻器主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/zhijaiqia/zjq-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/yingerxibiqi/xbq2.jpg" onclick="switchImg(this)">
-        <img src="images/yingerxibiqi/xbq3.jpg" onclick="switchImg(this)">
-        <img src="images/yingerxibiqi/xbq4.jpg" onclick="switchImg(this)">
-        <img src="images/yingerxibiqi/xbq5.jpg" onclick="switchImg(this)">
-        <img src="images/yingerxibiqi/xbq6.jpg" onclick="switchImg(this)">
-        <img src="images/yingerxibiqi/xbq7.jpg" onclick="switchImg(this)">
-      </div>
-    </div>    
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/tiaoshen/TS-1.jpg" alt="跳绳主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/tiaoshen/TS-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/tiaoshen/TS-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/tiaoshen/TS-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/tiaoshen/TS-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/tiaoshen/TS-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/tiaoshen/TS-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/tiaoshen/TS-2 (6).jpg" onclick="switchImg(this)">
-        <img src="images/tiaoshen/TS-2 (7).jpg" onclick="switchImg(this)">
-      </div>
-    </div>     
-
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/kq-zhaguo/KQZG-1.jpg" alt="空气炸锅主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/kq-zhaguo/KQZG-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/kq-zhaguo/KQZG-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/kq-zhaguo/KQZG-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/kq-zhaguo/KQZG-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/kq-zhaguo/KQZG-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/kq-zhaguo/KQZG-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/kq-zhaguo/KQZG-2 (6).jpg" onclick="switchImg(this)">
-      </div>
-    </div>
-  
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/qiegeqi/QGQ-1.jpg" alt="三线切割器主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/qiegeqi/QGQ-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/qiegeqi/QGQ-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/qiegeqi/QGQ-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/qiegeqi/QGQ-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/qiegeqi/QGQ-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/qiegeqi/QGQ-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/qiegeqi/QGQ-2 (6).jpg" onclick="switchImg(this)">
-      </div>
-    </div>  
-  
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/yanmoqi/YMQ-1.jpg" alt="研磨器主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/yanmoqi/YMQ-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/yanmoqi/YMQ-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/yanmoqi/YMQ-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/yanmoqi/YMQ-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/yanmoqi/YMQ-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/yanmoqi/YMQ-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/yanmoqi/YMQ-2 (6).jpg" onclick="switchImg(this)">
-      </div>
-    </div>    
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/suishenting/SST-1.jpg" alt="随身听主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/suishenting/SST-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/suishenting/SST-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/suishenting/SST-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/suishenting/SST-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/suishenting/SST-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/suishenting/SST-2 (5).jpg" onclick="switchImg(this)">
-      </div>
-    </div>   
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/matongshua/MTS-1.jpg" alt="马桶刷主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/matongshua/MTS-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/matongshua/MTS-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/matongshua/MTS-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/matongshua/MTS-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/matongshua/MTS-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/matongshua/MTS-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/matongshua/MTS-2 (6).jpg" onclick="switchImg(this)">
-        <img src="images/matongshua/MTS-2 (7).jpg" onclick="switchImg(this)">
-      </div>
-    </div>    
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/MP3/MP3-1.jpg" alt="MP3主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/MP3/MP3-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/MP3/MP32 (1).jpg" onclick="switchImg(this)">
-        <img src="images/MP3/MP3-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/MP3/MP3-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/MP3/MP3-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/MP3/MP3-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/MP3/MP3-2 (6).jpg" onclick="switchImg(this)">
-      </div>
-    </div>   
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/caopingdeng/CPD-1.jpg" alt="草坪灯主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/caopingdeng/CPD-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/caopingdeng/CPD-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/caopingdeng/CPD-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/caopingdeng/CPD-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/caopingdeng/CPD-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/caopingdeng/CPD-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/caopingdeng/CPD-2 (6).jpg" onclick="switchImg(this)">
-      </div>
-    </div>    
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
-      <div class="tb-main">
-        <img id="tbMainImg" src="images/huasa/HS-1.jpg" alt="花洒主图">
-      </div>
-      <div class="tb-thumb">
-        <img src="images/huasa/HS-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/huasa/HS-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/huasa/HS-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/huasa/HS-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/huasa/HS-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/huasa/HS-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/huasa/HS-2 (6).jpg" onclick="switchImg(this)">
-      </div>
-    </div>    
 
     <div class="back-link">
       <a href="portfolio.html" class="btn btn-outline">← 返回作品集</a>
@@ -398,7 +102,7 @@
   </div>
 </section>
 
-<!-- 全屏放大灯箱 + 左右翻页 -->
+<!-- 全屏放大灯箱 + 左右翻页（保留不变） -->
 <div class="lightbox" id="lightbox">
   <div class="lightbox-close" onclick="closeLightbox()">×</div>
   <div class="lightbox-prev" onclick="prevImg()">←</div>
@@ -406,34 +110,190 @@
   <div class="lightbox-next" onclick="nextImg()">→</div>
 </div>
 
-<!-- 页脚 -->
+<!-- 页脚（全站统一） -->
 <footer class="footer">
   <div class="container">
     <p>© 2026 YUAN PENG · 电商设计师</p>
   </div>
 </footer>
 
-  <!-- 交互JS -->
 <script>
-// 图片切换
+// ====================== 1. 在这里配置所有21个产品信息 ======================
+// key是产品文件夹名（必须和images下的文件夹名完全一致）
+// value是产品标题和介绍，不用每个页面改，统一在这里管理
+const products = {
+  // 示例1：电动牙刷
+  'dd-yashua': {
+    title: '电动牙刷',
+  },  
+  // 示例2：彩灯
+  'Caideng': {
+    title: '彩灯',
+  },
+  // 示例3：手表
+  'watch': {
+    title: '手表',
+  },
+  // 示例4：捏捏球
+  'nienieqiu': {
+    title: '捏捏球',
+  },
+  // 示例5：巴克球
+  'bakeqqiu': {
+    title: '巴克球',
+  },
+  // 示例6：涂鸦板
+  'tuyaban': {
+    title: '涂鸦板',
+  },
+  // 示例7：充电器
+  'chongdianqi': {
+    title: '充电器-渲染',
+  },
+  // 示例4：净化器
+  'kq-jinghuaqi': {
+    title: '空气净化器',
+  },
+  // 示例4：指甲钳
+  'zhijaiqia': {
+    title: '指甲钳',
+  },
+  // 示例4：美妆蛋
+  'meizhuangdan': {
+    title: '美妆蛋',
+  },
+  // 示例4：婴儿吸鼻器
+  'yingerxibiqi': {
+    title: '婴儿吸鼻器',
+  },
+  // 示例4：跳绳
+  'tiaoshen': {
+    title: '跳绳',
+  },
+  // 示例4：空气炸锅
+  'kq-zhaguo': {
+    title: '空气炸锅',
+  },
+  // 示例4：三线切割器
+  'qiegeqi': {
+    title: '三线切割器',
+  },
+  // 示例4：研磨器
+  'yanmoqi': {
+    title: '研磨器',
+  },
+  // 示例4：搬家滑轮
+  'Banjiahualun': {
+    title: '搬家滑轮',
+  },
+  // 示例4：随身听
+  'suishenting': {
+    title: '随身听',
+  },
+  // 示例4：马桶刷
+  'matongshua': {
+    title: '马桶刷',
+  },
+  // 示例4：MP3
+  'MP3': {
+    title: 'MP3',
+  },
+  // 示例4：草坪灯
+  'Caopingdeng': {
+    title: '草坪灯',
+  },
+  // 示例21：花洒
+  'huasa': {
+    title: '花洒',
+  },
+  // 【把剩下18个产品按上面的格式补充进来即可】
+  // 格式：'文件夹名': { title: '产品标题', desc: '产品介绍' },
+};
+
+// ====================== 2. 自动解析链接参数，加载对应产品 ======================
+// 获取URL中的产品文件夹名，比如work-detail.html?product=chongdianqiXR
+const urlParams = new URLSearchParams(window.location.search);
+const productFolder = urlParams.get('product');
+
+// 如果没传参数，默认加载第一个产品
+if (!productFolder || !products[productFolder]) {
+  alert('未找到对应产品，将加载默认产品');
+  window.location.href = 'work-detail.html?product=chongdianqiXR';
+}
+
+// 自动生成当前产品的图片列表（不用手动写imgList）
+const imgList = [];
+for (let i = 1; i <= 7; i++) {
+  imgList.push(`images/${productFolder}/HL-${i}.jpg`);
+}
+let currentIndex = 0;
+
+// ====================== 3. 页面初始化：设置标题、介绍、图片 ======================
+document.getElementById('workTitle').textContent = products[productFolder].title;
+document.getElementById('workDesc').textContent = products[productFolder].desc;
+document.getElementById('tbMainImg').src = imgList[0];
+
+// 自动生成缩略图（不用手动写7个img标签）
+const thumbList = document.getElementById('thumbList');
+thumbList.innerHTML = ''; // 清空默认内容
+imgList.forEach((src, index) => {
+  const img = document.createElement('img');
+  img.src = src;
+  img.onclick = () => switchImg(img);
+  if (index === 0) img.classList.add('active');
+  thumbList.appendChild(img);
+});
+
+// ====================== 4. 原有功能（图片切换、灯箱放大、翻页） ======================
+// 切换主图
 function switchImg(el){
   document.getElementById('tbMainImg').src = el.src;
   document.querySelectorAll('.tb-thumb img').forEach(item=>{
     item.classList.remove('active');
   })
   el.classList.add('active');
+  // 更新当前索引
+  currentIndex = imgList.indexOf(el.src);
 }
 
-<!-- 汉堡菜单JS -->
-<script>
+// 打开灯箱
+function openLightboxByUrl(url){
+  currentIndex = imgList.indexOf(url);
+  document.getElementById('lightboxImg').src = url;
+  document.getElementById('lightbox').style.display = 'flex';
+}
+
+// 上一张/下一张
+function prevImg(){
+  currentIndex--;
+  if(currentIndex < 0) currentIndex = imgList.length - 1;
+  document.getElementById('lightboxImg').src = imgList[currentIndex];
+}
+function nextImg(){
+  currentIndex++;
+  if(currentIndex >= imgList.length) currentIndex = 0;
+  document.getElementById('lightboxImg').src = imgList[currentIndex];
+}
+
+// 关闭灯箱
+function closeLightbox(){
+  document.getElementById('lightbox').style.display = 'none';
+}
+
+// 键盘控制（← →翻图，ESC关闭）
+document.addEventListener('keydown',function(e){
+  if(e.key === 'ArrowLeft') prevImg();
+  if(e.key === 'ArrowRight') nextImg();
+  if(e.key === 'Escape') closeLightbox();
+});
+
+// 汉堡菜单
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
-
 hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('active');
   hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
 });
-
 document.querySelectorAll('.nav-menu a').forEach(link => {
   link.addEventListener('click', () => {
     navMenu.classList.remove('active');
