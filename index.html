@@ -3,111 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>袁 鹏 - 电商设计师 | 我的作品集</title>
-  <meta name="description" content="专注电商设计、美工设计、AIGC创作，极简高级感设计风格，欢迎合作咨询。">
-  <link rel="stylesheet" href="css/style.css">
+  <title>作品详情 - 设计作品集</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- 导航栏（PC端横向菜单，手机端汉堡菜单） -->
-<nav class="navbar">
-  <div class="container nav-wrap">
-    <a href="index.html" class="logo">YUAN PENG · DESIGN</a>
-    <ul class="nav-menu">
-      <li><a href="index.html" class="active">首页</a></li>
-      <li><a href="portfolio.html">作品集</a></li>
-      <li><a href="about.html">关于我</a></li>
-      <li><a href="contact.html">联系我</a></li>
-    </ul>
-    <button class="hamburger">☰</button>
-  </div>
-</nav>
-
-<!-- 英雄区（核心：PC端左文右图，手机端自动上下结构） -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <!-- 左侧文字区（PC左/手机上） -->
-      <div class="hero-text-side">
-        <h1>袁鹏<br>电商设计师/美工</h1>
-        <p class="phone">📞 155 9927 6792</p>
-        <p class="tags">美工设计师 | 电商设计 | 品牌系统 | 三维渲染 | AIGC创意</p>
-        <div class="hero-buttons">
-          <a href="portfolio.html" class="btn btn-primary">查看作品集</a>
-          <a href="contact.html" class="btn btn-outline">联系合作</a>
-        </div>
-      </div>
-      <!-- 右侧图片区（PC右/手机下） -->
-      <div class="hero-image-side">
-        <img src="images/avatar.jpg" alt="袁鹏的形象照" class="hero-img">
-      </div>
+  <!-- 导航栏 -->
+  <header class="header">
+    <div class="nav">
+      <a href="index.html" class="logo">作品集</a>
+      <ul class="menu">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="portfolio.html">作品集</a></li>
+        <li><a href="about.html">关于我</a></li>
+        <li><a href="contact.html">联系我</a></li>
+      </ul>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- 代表作品 -->
-<section class="works-section">
-  <div class="container">
-    <h2>代表作品</h2>
-    <div class="grid">
-      <div class="work-card">
-        <img src="images/dd-yashua/DDYS-1.jpg" alt="图片设计">
-        <span class="work-tag">电动牙刷</span>
-        <a href="work-detail.html" class="view-link">查看详情 →</a>
-        <h3>亚马逊图片设计</h3>
+  <!-- 作品详情核心区域（唯一结构，无重复ID） -->
+  <main class="work-detail-main">
+    <section class="work-detail-section">
+      <h1 id="productTitle">作品详情</h1>
+      
+      <!-- 动态图片画廊 -->
+      <div class="gallery-container">
+        <button id="prevBtn">←</button>
+        <img id="tbMainImg" src="" alt="作品主图">
+        <button id="nextBtn">→</button>
       </div>
-      <div class="work-card">
-        <img src="images/chongdianqiXR/CDQ-1.jpg" alt="3D渲染设计">
-        <span class="work-tag">充电器</span>
-        <a href="work-detail.html" class="view-link">查看详情 →</a>
-        <h3>三维渲染设计</h3>
+      <div class="thumbnail-list"></div>
+
+      <div class="work-info">
+        <p>设计师：个人设计工作室</p>
+        <p>设计类型：电商产品视觉设计</p>
+        <p>工具：PS / C4D / Blender</p>
       </div>
-      <div class="work-card">
-        <img src="videos/xungouqi-xr.mp4" alt="AIGC设计">
-        <span class="work-tag">AIGC</span>
-        <a href="work-detail.html" class="view-link">查看详情 →</a>
-        <h3>AIGC创作设计</h3>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </main>
 
-<!-- 快捷入口 -->
-<section class="cta-section" style="background:var(--light-gray)">
-  <div class="container" style="text-align:center">
-    <h2>快速导航</h2>
-    <div style="margin-top:2rem; display:flex; gap:2rem; justify-content:center; flex-wrap:wrap">
-      <a href="portfolio.html" class="btn">全部作品集</a>
-      <a href="contact.html" class="btn btn-primary">立即联系</a>
-    </div>
-  </div>
-</section>
+  <!-- 页脚 -->
+  <footer class="footer">
+    <p>© 2025 个人设计作品集 | 版权所有</p>
+  </footer>
 
-<!-- 页脚 -->
-<footer class="footer">
-  <div class="container">
-    <p>© 2025 YUAN PENG · 电商设计师</p>
-  </div>
-</footer>
+  <!-- 核心JS：动态加载作品 + 图片切换 -->
+  <script>
+    // 1. 定义所有作品的图片路径（可自行扩展）
+    const productGallery = {
+      "electric-toothbrush": {
+        title: "电动牙刷 - 亚马逊图片设计",
+        images: [
+          "images/dd-yashua/DDYS-1.jpg",
+          "images/dd-yashua/DDYS-2 (1).jpg",
+          "images/dd-yashua/DDYS-2 (2).jpg",
+          "images/dd-yashua/DDYS-2 (3).jpg",
+          "images/dd-yashua/DDYS-2 (4).jpg",
+          "images/dd-yashua/DDYS-2 (5).jpg",
+          "images/dd-yashua/DDYS-2 (6).jpg"
+        ]
+      },
+      "charger": {
+        title: "充电器 - 三维渲染设计",
+        images: [
+          "images/chongdianqiXR/CDQ-1.jpg",
+          "images/chongdianqiXR/CDQ-2 (1).jpg",
+          "images/chongdianqiXR/CDQ-2 (2).jpg",
+          "images/chongdianqiXR/CDQ-2 (3).jpg",
+          "images/chongdianqiXR/CDQ-2 (4).jpg",
+          "images/chongdianqiXR/CDQ-2 (5).jpg",
+          "images/chongdianqiXR/CDQ-2 (6).jpg"
+        ]
+      },
+      "color-light": {
+        title: "彩灯 - 产品视觉设计",
+        images: [
+          "images/Caideng/CD-1.jpg",
+          "images/Caideng/CD-2 (1).jpg",
+          "images/Caideng/CD-2 (2).jpg",
+          "images/Caideng/CD-2 (3).jpg",
+          "images/Caideng/CD-2 (4).jpg",
+          "images/Caideng/CD-2 (5).jpg",
+          "images/Caideng/CD-2 (6).jpg",
+          "images/Caideng/CD-2 (7).jpg"
+        ]
+      }
+    };
 
-<!-- 汉堡菜单交互JS（所有页面通用） -->
-<script>
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+    // 2. 获取URL参数（判断跳转的是哪个作品）
+    function getProductParam() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("product") || "electric-toothbrush";
+    }
 
-// 点击汉堡按钮切换菜单显示/隐藏
-hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-  // 按钮图标自动切换（☰ ↔ ✕）
-  hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
-});
+    // 3. 初始化页面
+    document.addEventListener("DOMContentLoaded", function() {
+      const currentProduct = getProductParam();
+      const productData = productGallery[currentProduct];
+      const imgList = productData.images;
+      let currentIndex = 0;
 
-// 点击菜单项后自动收起菜单
-document.querySelectorAll('.nav-menu a').forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-    hamburger.textContent = '☰';
-  });
-});
-</script>
+      // 绑定DOM元素
+      const mainImg = document.getElementById("tbMainImg");
+      const thumbContainer = document.querySelector(".thumbnail-list");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const titleEl = document.getElementById("productTitle");
+
+      // 设置作品标题
+      titleEl.textContent = productData.title;
+      // 初始化主图
+      mainImg.src = imgList[0];
+
+      // 4. 动态生成缩略图
+      imgList.forEach((src, index) => {
+        const thumb = document.createElement("img");
+        thumb.src = src;
+        thumb.classList.add("thumbnail");
+        thumb.dataset.index = index;
+        // 缩略图点击事件
+        thumb.addEventListener("click", () => {
+          currentIndex = index;
+          mainImg.src = src;
+          updateActiveThumb();
+        });
+        thumbContainer.appendChild(thumb);
+      });
+
+      // 5. 更新缩略图选中状态
+      function updateActiveThumb() {
+        document.querySelectorAll(".thumbnail").forEach((thumb, i) => {
+          thumb.classList.toggle("active", i === currentIndex);
+        });
+      }
+      updateActiveThumb();
+
+      // 6. 左右切换按钮
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + imgList.length) % imgList.length;
+        mainImg.src = imgList[currentIndex];
+        updateActiveThumb();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % imgList.length;
+        mainImg.src = imgList[currentIndex];
+        updateActiveThumb();
+      });
+    });
+  </script>
 </body>
 </html>
