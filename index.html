@@ -6,6 +6,14 @@
   <title>袁 鹏 - 电商设计师 | 我的作品集</title>
   <meta name="description" content="专注电商设计、美工设计、AIGC创作，极简高级感设计风格，欢迎合作咨询。">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* 新增：链接继承样式，无下划线、不改变原有外观 */
+    <span style="background: #ffff99;">.work-card a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }</span>
+  </style>
 </head>
 <body>
 <!-- 导航栏（PC端横向菜单，手机端汉堡菜单） -->
@@ -21,8 +29,7 @@
     <button class="hamburger">☰</button>
   </div>
 </nav>
-
-<!-- 英雄区（核心：PC端左文右图，手机端自动上下结构） -->
+<!-- 英雄区（PC端左文右图，手机端自动上下结构） -->
 <section class="hero">
   <div class="container">
     <div class="hero-content">
@@ -30,7 +37,7 @@
       <div class="hero-text-side">
         <h1>袁鹏<br>电商设计师/美工</h1>
         <p class="phone">📞 155 9927 6792</p>
-        <p class="tags">美工设计师 | 电商设计 | 品牌系统 | 三维渲染 | AIGC创意</p>
+        <p class="tags">美工设计师 | 电商设计 | 三维渲染 | AIGC创意</p>
         <div class="hero-buttons">
           <a href="portfolio.html" class="btn btn-primary">查看作品集</a>
           <a href="contact.html" class="btn btn-outline">联系合作</a>
@@ -43,34 +50,38 @@
     </div>
   </div>
 </section>
-
 <!-- 代表作品 -->
 <section class="works-section">
   <div class="container">
     <h2>代表作品</h2>
     <div class="grid">
       <div class="work-card">
-        <img src="images/dd-yashua/DDYS-1.jpg" alt="图片设计">
-        <span class="work-tag">电动牙刷</span>
-        <a href="work-detail.html" class="view-link">查看详情 →</a>
-        <span style="background-color: #ffff99;"><h3><a href="work-detail.html?product=dd-yashua">电动牙刷-亚马逊图片设计</a></h3></span>
+        <span style="background: #ffff99;"><a href="work-detail.html?product=dd-yashua"></span>
+          <img src="images/dd-yashua/DDYS-1.jpg" alt="图片设计">
+          <span class="work-tag">电动牙刷</span>
+          <a href="work-detail.html" class="view-link">查看详情 →</a>
+          <h3>亚马逊图片设计</h3>
+        <span style="background: #ffff99;"></a></span>
       </div>
       <div class="work-card">
-        <img src="images/chongdianqiXR/CDQ-1.jpg" alt="3D渲染设计">
-        <span class="work-tag">充电器</span>
-        <a href="work-detail.html" class="view-link">查看详情 →</a>
-        <span style="background-color: #ffff99;"><h3><a href="work-detail.html?product=chongdianqiXR">充电器-三维渲染设计</a></h3></span>
+        <span style="background: #ffff99;"><a href="work-detail.html?product=chongdianqiXR"></span>
+          <img src="images/chongdianqiXR/CDQ-1.jpg" alt="3D渲染设计">
+          <span class="work-tag">充电器</span>
+          <a href="work-detail.html" class="view-link">查看详情 →</a>
+          <h3>三维渲染设计</h3>
+        <span style="background: #ffff99;"></a></span>
       </div>
       <div class="work-card">
-        <img src="images/Caideng/CD-1.jpg" alt="AIGC设计">
-        <span class="work-tag">彩灯（AIGC）</span>
-        <a href="work-detail.html" class="view-link">查看详情 →</a>
-        <span style="background-color: #ffff99;"><h3><a href="work-detail.html?product=Caideng">彩灯-AIGC创作设计</a></h3></span>
+        <span style="background: #ffff99;"><a href="work-detail.html?product=Caideng"></span>
+          <img src="images/Caideng/CD-1.jpg" alt="AIGC设计">
+          <span class="work-tag">彩灯（AIGC）</span>
+          <a href="work-detail.html" class="view-link">查看详情 →</a>
+          <h3>AIGC创作设计</h3>
+        <span style="background: #ffff99;"></a></span>
       </div>
     </div>
   </div>
 </section>
-
 <!-- 快捷入口 -->
 <section class="cta-section" style="background:var(--light-gray)">
   <div class="container" style="text-align:center">
@@ -81,26 +92,22 @@
     </div>
   </div>
 </section>
-
 <!-- 页脚 -->
 <footer class="footer">
   <div class="container">
     <p>© 2026 YUAN PENG · 电商设计师</p>
   </div>
 </footer>
-
 <!-- 汉堡菜单交互JS（所有页面通用） -->
 <script>
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
-
 // 点击汉堡按钮切换菜单显示/隐藏
 hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('active');
   // 按钮图标自动切换（☰ ↔ ✕）
   hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
 });
-
 // 点击菜单项后自动收起菜单
 document.querySelectorAll('.nav-menu a').forEach(link => {
   link.addEventListener('click', () => {
