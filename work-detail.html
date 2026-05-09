@@ -56,6 +56,10 @@
     .tb-thumb img {
       cursor: zoom-in;
     }
+    <span style="background-color: #ffff99;">/* 默认隐藏所有产品画廊，只显示当前产品 */
+    .tb-gallery {
+      display: none;
+    }</span>
   </style>
 </head>
 <body>
@@ -73,8 +77,8 @@
   </div>
 </nav>
 
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-    <div class="tb-gallery">
+    <span style="background-color: #ffff99;"><!-- 电动牙刷：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="dd-yashua">
       <div class="tb-main">
         <img id="tbMainImg" src="images/dd-yashua/DDYS-1.jpg" alt="电动牙刷主图">
       </div>
@@ -89,8 +93,8 @@
       </div>
     </div>
 
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    <span style="background-color: #ffff99;"><!-- 彩灯：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="Caideng">
       <div class="tb-main">
         <img id="tbMainImg" src="images/Caideng/CD-1.jpg" alt="彩灯主图">
       </div>
@@ -106,24 +110,24 @@
       </div>
     </div>
 
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    <span style="background-color: #ffff99;"><!-- 手表：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="watch">
       <div class="tb-main">
-        <img id="tbMainImg" src="images/Watch/SB-1.jpg" alt="手表主图">
+        <img id="tbMainImg" src="images/watch/SB-1.jpg" alt="手表主图">
       </div>
       <div class="tb-thumb">
-        <img src="images/Watch/SB-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/Watch/SB-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/Watch/SB-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/Watch/SB-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/Watch/SB-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/Watch/SB-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/Watch/SB-2 (6).jpg" onclick="switchImg(this)">
+        <img src="images/watch/SB-1.jpg" onclick="switchImg(this)" class="active">
+        <img src="images/watch/SB-2 (1).jpg" onclick="switchImg(this)">
+        <img src="images/watch/SB-2 (2).jpg" onclick="switchImg(this)">
+        <img src="images/watch/SB-2 (3).jpg" onclick="switchImg(this)">
+        <img src="images/watch/SB-2 (4).jpg" onclick="switchImg(this)">
+        <img src="images/watch/SB-2 (5).jpg" onclick="switchImg(this)">
+        <img src="images/watch/SB-2 (6).jpg" onclick="switchImg(this)">
       </div>
     </div>
 
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    <span style="background-color: #ffff99;"><!-- 捏捏球：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="nienieqiu">
       <div class="tb-main">
         <img id="tbMainImg" src="images/nienieqiu/NNQ-1.jpg" alt="捏捏球主图">
       </div>
@@ -138,8 +142,8 @@
       </div>
     </div>
 
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    <span style="background-color: #ffff99;"><!-- 巴克球：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="bakeqqiu">
       <div class="tb-main">
         <img id="tbMainImg" src="images/bakeqqiu/BKQ-1.jpg" alt="巴克球主图">
       </div>
@@ -153,9 +157,9 @@
         <img src="images/bakeqqiu/BAQ-2 (6).jpg" onclick="switchImg(this)">
       </div>
     </div>
-  
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+
+    <span style="background-color: #ffff99;"><!-- 涂鸦板：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="tuyaban">
       <div class="tb-main">
         <img id="tbMainImg" src="images/tuyaban/TYB-1.jpg" alt="涂鸦板主图">
       </div>
@@ -170,24 +174,24 @@
       </div>
     </div>
 
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    <span style="background-color: #ffff99;"><!-- 充电器：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="chongdianqiXR">
       <div class="tb-main">
-        <img id="tbMainImg" src="images/chongdianqieXR/CDQ-1 (1).jpg" alt="充电器主图">
+        <img id="tbMainImg" src="images/chongdianqiXR/CDQ-1.jpg" alt="充电器主图">
       </div>
       <div class="tb-thumb">
-        <img src="images/chongdianqieXR/CDQ-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/chongdianqieXR/CDQ-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/chongdianqieXR/CDQ-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/chongdianqieXR/CDQ-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/chongdianqieXR/CDQ-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/chongdianqieXR/CDQ-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/chongdianqieXR/CDQ-2 (6).jpg" onclick="switchImg(this)">
+        <img src="images/chongdianqiXR/CDQ-1.jpg" onclick="switchImg(this)" class="active">
+        <img src="images/chongdianqiXR/CDQ-2 (1).jpg" onclick="switchImg(this)">
+        <img src="images/chongdianqiXR/CDQ-2 (2).jpg" onclick="switchImg(this)">
+        <img src="images/chongdianqiXR/CDQ-2 (3).jpg" onclick="switchImg(this)">
+        <img src="images/chongdianqiXR/CDQ-2 (4).jpg" onclick="switchImg(this)">
+        <img src="images/chongdianqiXR/CDQ-2 (5).jpg" onclick="switchImg(this)">
+        <img src="images/chongdianqiXR/CDQ-2 (6).jpg" onclick="switchImg(this)">
       </div>
-    </div>      
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    </div>
+
+    <span style="background-color: #ffff99;"><!-- 净化器：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="kq-jinghuaqi">
       <div class="tb-main">
         <img id="tbMainImg" src="images/kq-jinghuaqi/JHQ-1.jpg" alt="净化器主图">
       </div>
@@ -201,9 +205,9 @@
         <img src="images/kq-jinghuaqi/JHQ-2 (6).jpg" onclick="switchImg(this)">
       </div>
     </div>
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+
+    <span style="background-color: #ffff99;"><!-- 指甲钳：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="zhijaiqia">
       <div class="tb-main">
         <img id="tbMainImg" src="images/zhijaiqia/zjq-1.jpg" alt="指甲钳主图">
       </div>
@@ -216,10 +220,10 @@
         <img src="images/zhijaiqia/zjq-2 (5).jpg" onclick="switchImg(this)">
         <img src="images/zhijaiqia/zjq-2 (6).jpg" onclick="switchImg(this)">
       </div>
-    </div>   
-    
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    </div>
+
+    <span style="background-color: #ffff99;"><!-- 美妆蛋：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="meizhuangdan">
       <div class="tb-main">
         <img id="tbMainImg" src="images/meizhuangdan/MZD-1.jpg" alt="美妆蛋主图">
       </div>
@@ -231,15 +235,15 @@
         <img src="images/meizhuangdan/MZD-2 (4).jpg" onclick="switchImg(this)">
         <img src="images/meizhuangdan/MZD-2 (5).jpg" onclick="switchImg(this)">
       </div>
-    </div>  
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    </div>
+
+    <span style="background-color: #ffff99;"><!-- 婴儿吸鼻器：添加data-product匹配参数+修复图片路径 --></span>
+    <div class="tb-gallery" data-product="yingerxibiqi">
       <div class="tb-main">
         <img id="tbMainImg" src="images/yingerxibiqi/xbq1.jpg" alt="婴儿吸鼻器主图">
       </div>
       <div class="tb-thumb">
-        <img src="images/zhijaiqia/zjq-1.jpg" onclick="switchImg(this)" class="active">
+        <img src="images/yingerxibiqi/xbq1.jpg" onclick="switchImg(this)" class="active">
         <img src="images/yingerxibiqi/xbq2.jpg" onclick="switchImg(this)">
         <img src="images/yingerxibiqi/xbq3.jpg" onclick="switchImg(this)">
         <img src="images/yingerxibiqi/xbq4.jpg" onclick="switchImg(this)">
@@ -247,10 +251,10 @@
         <img src="images/yingerxibiqi/xbq6.jpg" onclick="switchImg(this)">
         <img src="images/yingerxibiqi/xbq7.jpg" onclick="switchImg(this)">
       </div>
-    </div>    
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    </div>
+
+    <span style="background-color: #ffff99;"><!-- 跳绳：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="tiaoshen">
       <div class="tb-main">
         <img id="tbMainImg" src="images/tiaoshen/TS-1.jpg" alt="跳绳主图">
       </div>
@@ -264,10 +268,10 @@
         <img src="images/tiaoshen/TS-2 (6).jpg" onclick="switchImg(this)">
         <img src="images/tiaoshen/TS-2 (7).jpg" onclick="switchImg(this)">
       </div>
-    </div>     
+    </div>
 
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    <span style="background-color: #ffff99;"><!-- 空气炸锅：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="kq-zhaguo">
       <div class="tb-main">
         <img id="tbMainImg" src="images/kq-zhaguo/KQZG-1.jpg" alt="空气炸锅主图">
       </div>
@@ -281,9 +285,9 @@
         <img src="images/kq-zhaguo/KQZG-2 (6).jpg" onclick="switchImg(this)">
       </div>
     </div>
-  
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+
+    <span style="background-color: #ffff99;"><!-- 三线切割器：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="qiegeqi">
       <div class="tb-main">
         <img id="tbMainImg" src="images/qiegeqi/QGQ-1.jpg" alt="三线切割器主图">
       </div>
@@ -296,10 +300,10 @@
         <img src="images/qiegeqi/QGQ-2 (5).jpg" onclick="switchImg(this)">
         <img src="images/qiegeqi/QGQ-2 (6).jpg" onclick="switchImg(this)">
       </div>
-    </div>  
-  
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    </div>
+
+    <span style="background-color: #ffff99;"><!-- 研磨器：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="yanmoqi">
       <div class="tb-main">
         <img id="tbMainImg" src="images/yanmoqi/YMQ-1.jpg" alt="研磨器主图">
       </div>
@@ -312,9 +316,25 @@
         <img src="images/yanmoqi/YMQ-2 (5).jpg" onclick="switchImg(this)">
         <img src="images/yanmoqi/YMQ-2 (6).jpg" onclick="switchImg(this)">
       </div>
-    </div>    
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    </div>
+
+    <span style="background-color: #ffff99;"><!-- 搬家滑轮：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="Banjiahualun">
+      <div class="tb-main">
+        <img id="tbMainImg" src="images/Banjiahualun/HL-1.jpg" alt="搬家滑轮主图">
+      </div>
+      <div class="tb-thumb">
+        <img src="images/Banjiahualun/HL-1.jpg" onclick="switchImg(this)" class="active">
+        <img src="images/Banjiahualun/HL-2 (1).jpg" onclick="switchImg(this)">
+        <img src="images/Banjiahualun/HL-2 (2).jpg" onclick="switchImg(this)">
+        <img src="images/Banjiahualun/HL-2 (3).jpg" onclick="switchImg(this)">
+        <img src="images/Banjiahualun/HL-2 (4).jpg" onclick="switchImg(this)">
+        <img src="images/Banjiahualun/HL-2 (5).jpg" onclick="switchImg(this)">
+      </div>
+    </div>
+
+    <span style="background-color: #ffff99;"><!-- 随身听：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="suishenting">
       <div class="tb-main">
         <img id="tbMainImg" src="images/suishenting/SST-1.jpg" alt="随身听主图">
       </div>
@@ -326,10 +346,10 @@
         <img src="images/suishenting/SST-2 (4).jpg" onclick="switchImg(this)">
         <img src="images/suishenting/SST-2 (5).jpg" onclick="switchImg(this)">
       </div>
-    </div>   
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    </div>
+
+    <span style="background-color: #ffff99;"><!-- 马桶刷：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="matongshua">
       <div class="tb-main">
         <img id="tbMainImg" src="images/matongshua/MTS-1.jpg" alt="马桶刷主图">
       </div>
@@ -343,9 +363,10 @@
         <img src="images/matongshua/MTS-2 (6).jpg" onclick="switchImg(this)">
         <img src="images/matongshua/MTS-2 (7).jpg" onclick="switchImg(this)">
       </div>
-    </div>    
-      <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    </div>
+
+    <span style="background-color: #ffff99;"><!-- MP3：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="MP3">
       <div class="tb-main">
         <img id="tbMainImg" src="images/MP3/MP3-1.jpg" alt="MP3主图">
       </div>
@@ -358,26 +379,26 @@
         <img src="images/MP3/MP3-2 (5).jpg" onclick="switchImg(this)">
         <img src="images/MP3/MP3-2 (6).jpg" onclick="switchImg(this)">
       </div>
-    </div>   
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    </div>
+
+    <span style="background-color: #ffff99;"><!-- 草坪灯：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="Caopingdeng">
       <div class="tb-main">
-        <img id="tbMainImg" src="images/caopingdeng/CPD-1.jpg" alt="草坪灯主图">
+        <img id="tbMainImg" src="images/Caopingdeng/CPD-1.jpg" alt="草坪灯主图">
       </div>
       <div class="tb-thumb">
-        <img src="images/caopingdeng/CPD-1.jpg" onclick="switchImg(this)" class="active">
-        <img src="images/caopingdeng/CPD-2 (1).jpg" onclick="switchImg(this)">
-        <img src="images/caopingdeng/CPD-2 (2).jpg" onclick="switchImg(this)">
-        <img src="images/caopingdeng/CPD-2 (3).jpg" onclick="switchImg(this)">
-        <img src="images/caopingdeng/CPD-2 (4).jpg" onclick="switchImg(this)">
-        <img src="images/caopingdeng/CPD-2 (5).jpg" onclick="switchImg(this)">
-        <img src="images/caopingdeng/CPD-2 (6).jpg" onclick="switchImg(this)">
+        <img src="images/Caopingdeng/CPD-1.jpg" onclick="switchImg(this)" class="active">
+        <img src="images/Caopingdeng/CPD-2 (1).jpg" onclick="switchImg(this)">
+        <img src="images/Caopingdeng/CPD-2 (2).jpg" onclick="switchImg(this)">
+        <img src="images/Caopingdeng/CPD-2 (3).jpg" onclick="switchImg(this)">
+        <img src="images/Caopingdeng/CPD-2 (4).jpg" onclick="switchImg(this)">
+        <img src="images/Caopingdeng/CPD-2 (5).jpg" onclick="switchImg(this)">
+        <img src="images/Caopingdeng/CPD-2 (6).jpg" onclick="switchImg(this)">
       </div>
-    </div>    
-  
-    <!-- 淘宝式图片画廊（适配你的文件路径） -->
-      <div class="tb-gallery">
+    </div>
+
+    <span style="background-color: #ffff99;"><!-- 花洒：添加data-product匹配参数 --></span>
+    <div class="tb-gallery" data-product="huasa">
       <div class="tb-main">
         <img id="tbMainImg" src="images/huasa/HS-1.jpg" alt="花洒主图">
       </div>
@@ -390,14 +411,13 @@
         <img src="images/huasa/HS-2 (5).jpg" onclick="switchImg(this)">
         <img src="images/huasa/HS-2 (6).jpg" onclick="switchImg(this)">
       </div>
-    </div>    
+    </div>
 
     <div class="back-link">
       <a href="portfolio.html" class="btn btn-outline">← 返回作品集</a>
     </div>
   </div>
 </section>
-
 <!-- 全屏放大灯箱 + 左右翻页 -->
 <div class="lightbox" id="lightbox">
   <div class="lightbox-close" onclick="closeLightbox()">×</div>
@@ -405,26 +425,26 @@
   <img class="lightbox-img" id="lightboxImg" src="">
   <div class="lightbox-next" onclick="nextImg()">→</div>
 </div>
-
 <!-- 页脚 -->
 <footer class="footer">
   <div class="container">
     <p>© 2026 YUAN PENG · 电商设计师</p>
   </div>
 </footer>
-
   <!-- 交互JS -->
 <script>
-// 1. 所有图片列表【按你当前产品顺序】
-const imgList = [
-  "images/dd-yashua/DDYS-1.jpg",
-  "images/dd-yashua/DDYS-2.jpg",
-  "images/dd-yashua/DDYS-3.jpg",
-  "images/dd-yashua/DDYS-4.jpg",
-  "images/dd-yashua/DDYS-5.jpg",
-  "images/dd-yashua/DDYS-6.jpg",
-  "images/dd-yashua/DDYS-7.jpg"
-];
+<span style="background-color: #ffff99;">// 核心：根据URL参数显示当前产品，隐藏其他产品
+const urlParams = new URLSearchParams(window.location.search);
+const currentProduct = urlParams.get('product');
+// 显示对应产品的画廊
+document.querySelectorAll(`.tb-gallery[data-product="${currentProduct}"]`).forEach(gallery => {
+  gallery.style.display = 'block';
+});
+// 自动获取当前产品的所有图片
+const imgList = [];
+document.querySelectorAll(`.tb-gallery[data-product="${currentProduct}"] img`).forEach(img => {
+  if(!imgList.includes(img.src)) imgList.push(img.src);
+});</span>
 let currentIndex = 0;
 
 // 2. 切换主图
@@ -437,40 +457,34 @@ function switchImg(el){
   // 记录当前索引
   currentIndex = imgList.indexOf(el.src);
 }
-
 // 3. 打开灯箱（通过图片地址）
 function openLightboxByUrl(url){
   currentIndex = imgList.indexOf(url);
   document.getElementById('lightboxImg').src = url;
   document.getElementById('lightbox').style.display = 'flex';
 }
-
 // 4. 上一张
 function prevImg(){
   currentIndex--;
   if(currentIndex < 0) currentIndex = imgList.length - 1;
   document.getElementById('lightboxImg').src = imgList[currentIndex];
 }
-
 // 5. 下一张
 function nextImg(){
   currentIndex++;
   if(currentIndex >= imgList.length) currentIndex = 0;
   document.getElementById('lightboxImg').src = imgList[currentIndex];
 }
-
 // 6. 关闭灯箱
 function closeLightbox(){
   document.getElementById('lightbox').style.display = 'none';
 }
-
 // 键盘左右键翻图 / ESC关闭
 document.addEventListener('keydown',function(e){
   if(e.key === 'ArrowLeft') prevImg();
   if(e.key === 'ArrowRight') nextImg();
   if(e.key === 'Escape') closeLightbox();
 });
-
 // 汉堡菜单
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
